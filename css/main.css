@@ -1,0 +1,585 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@charset "UTF-8";
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+textarea {
+    resize: vertical;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select {
+    margin: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+img,
+video {
+    height: auto;
+    max-width: 100%;
+}
+
+iframe {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Thyssen";
+    src: url("../fonts/Thyssen.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins.ttf");
+}
+
+@font-face {
+    font-family: "Pushster";
+    src: url("../fonts/Pushster-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Miraculous&Christmas";
+    src: url("../fonts/Miraculous&Christmas.ttf");
+}
+
+.reveal {
+    opacity: 0 !important;
+    -webkit-transform: scale3d(0, 0, 0) !important;
+    transform: scale3d(0, 0, 0) !important;
+}
+
+.reveal__visible {
+    opacity: 1 !important;
+    -webkit-transform: scale3d(1, 1, 1) !important;
+    transform: scale3d(1, 1, 1) !important;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background: url("../images/bg%20(2).jpg") center/cover fixed;
+    position: relative;
+    height: 100vh;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    color: #FFFFFF;
+    -webkit-animation: bg 10s linear infinite;
+    animation: bg 10s linear infinite;
+}
+
+@-webkit-keyframes bg {
+    0% {
+        background: url("../images/bg%20(2).jpg") center/cover fixed;
+    }
+
+    30% {
+        background: url("../images/bg%20(1).jpg") center/cover fixed;
+    }
+
+    70% {
+        background: url("../images/bg%20(3).jpg") center/cover fixed;
+    }
+}
+
+@keyframes bg {
+    0% {
+        background: url("../images/bg%20(2).jpg") center/cover fixed;
+    }
+
+    30% {
+        background: url("../images/bg%20(1).jpg") center/cover fixed;
+    }
+
+    70% {
+        background: url("../images/bg%20(3).jpg") center/cover fixed;
+    }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-column-gap: 25px;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
+    overflow: hidden;
+    position: relative;
+    padding: 25px;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.5)));
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+}
+
+.container__countdonw {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    grid-row-gap: 25px;
+    overflow: hidden;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    padding: 5px;
+}
+
+.container__countdonw span {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+    font-family: "Thyssen", sans-serif !important;
+    text-align: center;
+}
+
+.countdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    grid-row-gap: 25px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    overflow: visible;
+    align-self: flex-start;
+}
+
+.countdown .container-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    grid-row-gap: 10px;
+    overflow: visible;
+}
+
+.countdown .container-box .box {
+    overflow: visible;
+    height: 70px;
+    width: 70px;
+    border-radius: 0.4rem;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    background: #151E40;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: "Pushster", sans-serif !important;
+    font-size: 2rem;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: relative;
+}
+
+.countdown .container-box .box::after {
+    content: "";
+    background: white;
+    width: 3px;
+    height: 30%;
+    left: -4%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    border-radius: 0.4rem;
+}
+
+.countdown .container-box .box::before {
+    content: "";
+    background: white;
+    width: 3px;
+    height: 30%;
+    right: -4%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    border-radius: 0.4rem;
+}
+
+.countdown .container-box .label {
+    font-size: 1.1rem;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    font-family: "Thyssen", sans-serif !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.hide-loader {
+    display: none !important;
+}
+
+.loader-section {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 588;
+}
+
+.loader {
+    font-size: 48px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #D52128;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+.loader::after {
+    content: "Joyeux Noël!";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-animation: animloader 10s ease-in infinite;
+    animation: animloader 10s ease-in infinite;
+}
+
+@-webkit-keyframes animloader {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes animloader {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.container__aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    grid-row-gap: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.container__aside span {
+    font-family: "Miraculous&Christmas", sans-serif;
+    font-size: 8rem;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.container__aside .message {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    font-family: "Thyssen", sans-serif !important;
+}
+
+.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    grid-row-gap: 15px;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.social-media-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    margin-top: 25px;
+}
+
+.social-media-container .link-social_media {
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    padding: 8px;
+    border-radius: 50%;
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.social-media-container .link-social_media:hover {
+    opacity: 0.8;
+}
+
+.social-media-container .link-social_media svg {
+    height: 1.2rem;
+    width: 1.2rem;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+}
+
+.social-media-container .link-social_media svg * {
+    fill: #151E40;
+}
+
+.signature {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: white;
+    font-family: "Poppins", sans-serif !important;
+    margin-top: 10px;
+}
+
+.signature a {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
+    color: white;
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 850px) {
+    .container {
+        height: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        grid-row-gap: 25px;
+    }
+
+    .container__countdonw {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .container__countdonw span {
+        font-size: 2rem;
+        color: white;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+        font-family: "Thyssen", sans-serif !important;
+    }
+
+    .countdown {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-column-gap: 25px;
+        -moz-column-gap: 25px;
+        column-gap: 25px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        overflow: visible;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}

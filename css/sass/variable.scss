@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Thyssen';
+    src: url('../fonts/Thyssen.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins.ttf');
+}
+
+@font-face {
+    font-family: 'Pushster';
+    src: url('../fonts/Pushster-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Miraculous&Christmas';
+    src: url('../fonts/Miraculous&Christmas.ttf');
+}
+
+
+$Neutral-1:#050517;
+$Neutral-2:#040E33;
+$Neutral-3:#D52128;
+$Neutral-4:#149749;
+$Neutral-5:#CF5C36;
+$Neutral-6:#353C58;
+$Neutral-7:#FFFFFF;
+$Neutral-8:rgba(255, 255, 2555, 0.8);
+$padding-section:20px;
+$Raduis:0.25rem;
+
+$MiraculousChristmas :'Miraculous&Christmas',
+sans-serif;
+
+$Pushster :'Pushster',
+sans-serif;
+$Thyssen :'Thyssen',
+sans-serif;
+
+$Poppins :'Poppins',
+sans-serif;

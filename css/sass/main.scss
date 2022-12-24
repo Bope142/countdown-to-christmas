@@ -1,0 +1,312 @@
+@import './reset.scss';
+@import './variable.scss';
+@import './reveal.scss';
+
+html {
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    background: url('../images/bg%20(2).jpg') center/cover fixed;
+    position: relative;
+    height: 100vh;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    color: $Neutral-7;
+    animation: bg 10s linear infinite;
+}
+
+@keyframes bg {
+    0% {
+        background: url('../images/bg%20(2).jpg') center/cover fixed;
+    }
+
+    30% {
+        background: url('../images/bg%20(1).jpg') center/cover fixed;
+    }
+
+    70% {
+        background: url('../images/bg%20(3).jpg') center/cover fixed;
+    }
+
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+    overflow: hidden;
+    position: relative;
+    padding: 25px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+    //    height: 100%;
+}
+
+.container__countdonw {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 25px;
+    overflow: hidden;
+    flex: none;
+    padding: 5px;
+
+    & span {
+        font-size: 3rem;
+        color: white;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+        font-family: $Thyssen !important;
+        text-align: center;
+        //        & h1 {
+        //            font-family: $MiraculousChristmas;
+        //        }
+
+        //        display: flex;
+        //        flex-direction: column;
+    }
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 25px;
+    flex: none;
+    overflow: visible;
+    align-self: flex-start;
+
+    & .container-box {
+        display: flex;
+        flex-direction: column;
+        flex: none;
+        grid-row-gap: 10px;
+        overflow: visible;
+
+        & .box {
+            overflow: visible;
+            height: 70px;
+            width: 70px;
+            border-radius: 0.4rem;
+            align-self: center;
+            flex: none;
+            background: #151E40;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-family: $Pushster !important;
+            font-size: 2rem;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            position: relative;
+
+            &::after {
+                content: "";
+                background: white;
+                width: 3px;
+                height: 30%;
+                left: -4%;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                border-radius: 0.4rem;
+            }
+
+            &::before {
+                content: "";
+                background: white;
+                width: 3px;
+                height: 30%;
+                right: -4%;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                border-radius: 0.4rem;
+            }
+        }
+
+        & .label {
+            font-size: 1.1rem;
+            align-self: center;
+            font-family: $Thyssen !important;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+
+        }
+
+    }
+}
+
+.hide-loader {
+    display: none !important;
+}
+
+.loader-section {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 588;
+}
+
+.loader {
+    font-size: 48px;
+    display: inline-block;
+    font-family: Arial,
+        Helvetica,
+        sans-serif;
+    font-weight: bold;
+    color: $Neutral-3;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+.loader::after {
+    content: 'Joyeux Noël!';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: animloader 10s ease-in infinite;
+}
+
+@keyframes animloader {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.container__aside {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    & span {
+        font-family: $MiraculousChristmas;
+        font-size: 8rem;
+        color: white;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+        text-align: center;
+    }
+
+    & .message {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 2.9rem;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        font-family: $Thyssen !important;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 15px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media-container {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    column-gap: 10px;
+    flex: none;
+    margin-top: 25px;
+
+    & .link-social_media {
+        flex: none;
+        padding: 8px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s linear;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        & svg {
+            height: 1.2rem;
+            width: 1.2rem;
+            flex: none;
+
+            & * {
+                fill: #151E40;
+            }
+        }
+    }
+}
+
+.signature {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: white;
+    font-family: $Poppins !important;
+    margin-top: 10px;
+
+    & a {
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        text-decoration: underline;
+        color: white;
+        opacity: 0.8;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .container {
+        height: auto;
+        flex-direction: column;
+        grid-row-gap: 25px;
+    }
+
+    .container__countdonw {
+        align-items: center;
+        justify-content: center;
+
+        & span {
+            font-size: 2rem;
+            color: white;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+            font-family: $Thyssen !important;
+        }
+    }
+
+    .countdown {
+        display: flex;
+        flex-direction: row;
+        column-gap: 25px;
+        justify-content: center;
+        align-items: center;
+        flex: none;
+        overflow: visible;
+        align-self: center;
+        flex-wrap: wrap;
+    }
+}
